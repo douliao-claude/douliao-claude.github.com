@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>API中转站| 国内ChatGPT/Claude/Deepseek免费API接口服务（2025最新版）</title>
+    <meta name="description" content="2025专业API中转站服务，提供ChatGPT API、Claude API、Deepseek API等国内直连接口。支持GPT-4o、Claude 3.5、Deepseek等全系列模型，稳定快速低成本，注册即送免费API额度，无需科学上网！">
+    <meta name="keywords" content="API中转站,中转站API,API中转服务,AI API中转,ChatGPT API中转,OpenAI API转发,大模型API转发,免费API中转,国内API接口,API代理,AI模型接口,API加速,API转发服务,免费API额度">
+    <meta property="og:title" content="【2025年最新】AI大模型API中转站 | 简易API免费API服务">
+    <meta property="og:description" content="专业AI大模型API中转平台，提供ChatGPT/Claude/Deepseek免费API接口。支持GPT-4o/o1，Claude 3.5，Deepseek等全系列模型，国内直连稳定快速，注册即送免费额度！">
+    <meta property="og:url" content="https://jeniya.cn/">
+    <meta property="twitter:title" content="【2025年最新】AI大模型API中转站 | 简易API免费API服务">
+    <meta property="twitter:description" content="专业AI大模型API中转平台，提供ChatGPT/Claude/Deepseek免费API接口。支持GPT-4o/o1，Claude 3.5，Deepseek等全系列模型，国内直连稳定快速，注册即送免费额度！">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="zh-CN">
+    <link rel="icon" href="/openai.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        :root {
+            --primary-color: #4DB6AC; /* 青绿色 */
+            --secondary-color: #7986CB; /* 靛蓝 */
+            --accent-color: #FFB74D; /* 橘黄 */
+            --text-light: #E0E0E0;
+            --text-medium: #B0BEC5;
+            --text-dark: #263238;
+            --bg-dark: #121A26;
+            --bg-gradient-1: #1F2B39; 
+            --bg-gradient-2: #223447; 
+
+            --section-1-bg: rgba(77, 182, 172, 0.2);
+            --section-2-bg: rgba(121, 134, 203, 0.2);
+            --section-3-bg: rgba(255, 183, 77, 0.15);
+            --section-4-bg: rgba(38, 50, 56, 0.6);
+            --section-5-bg: rgba(66, 86, 120, 0.5);
+            --section-6-bg: rgba(121, 134, 203, 0.1);
+
+            --box-shadow-light: rgba(0, 0, 0, 0.35);
+            --box-shadow-medium: rgba(0, 0, 0, 0.6);
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+            line-height: 1.65;
+            font-size: 18px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+        a:hover, a:focus {
+            color: var(--primary-color);
+            outline: none;
+            text-decoration: underline;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px 15px 160px;
+            box-sizing: border-box;
+            background: radial-gradient(circle at center, rgba(0,0,0,0.3), rgba(0,0,0,0.85)), 
+                       linear-gradient(135deg, var(--bg-gradient-1), var(--bg-gradient-2));
+            text-align: center;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        .content {
+            max-width: 800px;
+            background: rgba(30, 50, 60, 0.9);
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 0 35px var(--box-shadow-light);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 12px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+            font-weight: 900;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-bottom: 18px;
+            color: var(--text-medium);
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 28px;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 16px 38px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            color: var(--text-light);
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 6px 18px rgba(77, 182, 172, 0.6);
+            transition: all 0.3s ease;
+            user-select: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .button:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 120%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+            transition: left 0.6s ease;
+            z-index: 0;
+        }
+
+        .button:hover:before {
+            left: 100%;
+        }
+
+        .button:hover {
+            transform: scale(1.08) translateY(-4px);
+            box-shadow: 0 10px 28px rgba(255, 183, 77, 0.8);
+        }
+
+        .background {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(135deg, var(--bg-gradient-2), var(--bg-gradient-1));
+            z-index: -1;
+            opacity: 0.85;
+        }
+
+        .arrow-down {
+            position: absolute;
+            bottom: 35px;
+            font-size: 36px;
+            color: var(--primary-color);
+            cursor: pointer;
+            user-select: none;
+            animation: bounce 2.2s infinite;
+            background-color: rgba(30,50,60,0.7);
+            padding: 12px 30px;
+            border-radius: 40px;
+            box-shadow: 0 0 14px var(--primary-color);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .arrow-down:hover {
+            background-color: rgba(77,182,172,0.85);
+            transform: scale(1.12);
+        }
+
+        @keyframes bounce {
+            0%,20%,50%,80%,100% { transform: translateY(0) }
+            40% { transform: translateY(-22px) }
+            60% { transform: translateY(-12px) }
+        }
+
+        .markdown-content {
+            margin: 60px auto 120px;
+            max-width: 900px;
+            background: rgba(38, 56, 70, 0.9);
+            box-shadow: 0 0 35px var(--box-shadow-medium);
+            border-radius: 18px;
+            padding: 50px 60px 60px;
+            position: relative;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+        .markdown-content:before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 6px;
+            border-radius: 18px 18px 0 0;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            box-shadow: 0 0 18px var(--accent-color);
+        }
+
+        .markdown-content h2 {
+            font-size: 36px;
+            margin-bottom: 25px;
+            font-weight: 800;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 12px;
+            user-select: text;
+        }
+
+        .markdown-content p, .markdown-content li {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--text-light);
+            user-select: text;
+        }
+
+        .markdown-content blockquote {
+            border-left: 4px solid var(--secondary-color);
+            padding: 14px 28px;
+            margin: 25px 0;
+            font-style: italic;
+            background-color: rgba(30, 60, 80, 0.3);
+            border-radius: 8px;
+        }
+
+        .markdown-content ul {
+            margin-left: 28px;
+            list-style-type: disc;
+        }
+
+        .markdown-content ol {
+            margin-left: 28px;
+            list-style-type: decimal;
+        }
+
+        .markdown-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 35px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+            user-select: none;
+        }
+        .markdown-content th, .markdown-content td {
+            padding: 14px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: left;
+            font-size: 15px;
+            color: var(--text-light);
+        }
+        .markdown-content th {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .markdown-content tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+        .markdown-content tr:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .zzzzapi-highlight {
+            font-weight: bold;
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.5), rgba(255, 140, 0, 0.5));
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 5px;
+            box-shadow: 0 3px 8px rgba(255, 165, 0, 0.6);
+            user-select: text;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .zzzzapi-highlight:hover {
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.8), rgba(255, 140, 0, 0.8));
+            box-shadow: 0 6px 16px rgba(255, 165, 0, 0.9);
+            transform: scale(1.1) translateY(-3px);
+            cursor: pointer;
+        }
+
+        .section-container {
+            margin-bottom: 50px;
+            padding: 35px 40px;
+            border-radius: 14px;
+            background: var(--section-1-bg);
+            box-shadow: 0 12px 28px var(--box-shadow-light);
+            color: var(--text-light);
+            user-select: text;
+            transition: background 0.4s ease;
+        }
+        .section-container:hover {
+            background: var(--section-2-bg);
+            box-shadow: 0 18px 48px var(--box-shadow-medium);
+        }
+        .section-container h2 {
+            font-size: 32px;
+            margin-bottom: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+        .section-container ul li {
+            margin-bottom: 14px;
+        }
+
+        pre {
+            background-color: rgba(20, 30, 40, 0.85);
+            padding: 20px 25px;
+            border-radius: 14px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #80cbc4;
+            margin-top: 22px;
+            margin-bottom: 40px;
+            box-shadow: 0 0 20px rgba(0, 180, 166, 0.4);
+        }
+        pre:before {
+            content: "示例代码";
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 13px;
+            color: var(--text-light);
+            background-color: var(--accent-color);
+            padding: 4px 12px;
+            border-radius: 0 14px 0 14px;
+            user-select: none;
+        }
+
+        /* 响应式 */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            h1 {
+                font-size: 36px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+            p, ul li, ol li {
+                font-size: 16px;
+            }
+            .content, .markdown-content {
+                padding: 30px 25px;
+            }
+            .button {
+                font-size: 18px;
+                padding: 14px 30px;
+            }
+            .arrow-down {
+                font-size: 26px;
+                bottom: 20px;
+                padding: 10px 24px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .container {
+                padding-bottom: 200px;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            .button {
+                font-size: 16px;
+                padding: 12px 28px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(25px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="content">
+            <h1>【2025年首选】AI大模型API中转站</h1>
+            <h2>一站式解决ChatGPT / Claude / Deepseek等全系列API调用难题</h2>
+            <h2>🔥 国内直连 | ⚡ 低至官方6折 | 💯 企业级稳定服务</h2>
+            <a href="https://jeniya.cn/" target="_self" class="button">免费注册领取API中转额度</a>
+            <h3 style="margin-top:24px;">当前已为 <strong>31,405</strong> 位开发者提供API中转服务 | <strong id="curdate"></strong></h3>
+        </div>
+        <div class="arrow-down" onclick="scrollToContent()" aria-label="点击了解更多内容向下滚动">深入了解API中转站服务 ⬇️</div>
+    </div>
+
+    <section class="markdown-content" id="more-content" tabindex="0" aria-label="详细介绍API中转站服务">
+
+        <blockquote>
+            <p>【2025最新】<strong>AI大模型API中转站完全指南</strong> — 提供ChatGPT、Claude、Deepseek等<strong>免费API接口</strong>，让AI开发无障碍！</p>
+        </blockquote>
+
+        <p><a href="https://jeniya.cn/" target="_blank" class="zzzzapi-highlight">简易API</a> 提供<strong>专业AI大模型API中转服务</strong>，解决国内开发者API访问难题，支持各类主流大模型API接口调用。</p>
+        <p>无需科学上网，即可稳定使用 <strong>OpenAI API、Claude API和Deepseek API</strong> 等服务！让AI为您的应用开发提供强大助力！</p>
+
+        <div class="section-container section-1">
+            <h2>为什么选择简易API中转站？</h2>
+            <p><strong><a href="https://jeniya.cn/" target="_blank" class="zzzzapi-highlight">简易API</a> API中转站</strong> 是专为中国开发者和企业打造的AI大模型API服务平台，提供比官方渠道更便捷、更稳定的体验。</p>
+            <p>选择我们的<strong>API中转服务</strong>的五大核心优势：</p>
+            <ul>
+                <li>✅ <strong>国内直连</strong>：无需科学上网工具，直接访问，延迟低至50ms</li>
+                <li>✅ <strong>平台稳定</strong>：7×24小时稳定服务，99.9%可用性保障，企业级服务SLA</li>
+                <li>✅ <strong>成本优势</strong>：比官方渠道低20-40%的价格，按量计费更经济</li>
+                <li>✅ <strong>全模型支持</strong>：覆盖ChatGPT-4o、Claude 3.5、Deepseek等全系列热门模型</li>
+                <li>✅ <strong>即开即用</strong>：注册即送免费测试额度，5分钟内完成API集成</li>
+            </ul>
+        </div>
+
+        <div class="section-container section-2">
+            <h2>【2025年3月】热门API服务全览</h2>
+            <p>我们为您提供市场上最全面的<strong>AI大模型API接口</strong>，覆盖多种领先技术，助力您的智能应用开发：</p>
+            <ul>
+                <li><a href="https://jeniya.cn/" target="_blank"><strong>OpenAI API</strong></a> - 涵盖GPT-3.5/4/4o/o1/o3全系列模型，支持文本生成、图像创作、语音转文本等多项功能，功能强大且灵活。<span style="color:#FF7043;">热度：★★★★★</span></li>
+                <li><a href="https://jeniya.cn/" target="_blank"><strong>Claude API</strong></a> - 集成Claude 3 Opus / Sonnet / Haiku系列，擅长长文本理解与高质量内容生成，表现卓越。<span style="color:#FF7043;">热度：★★★★☆</span></li>
+                <li><a href="https://jeniya.cn/" target="_blank"><strong>Deepseek API</strong></a> - 中国顶尖语言模型，支持Deepseek Chat和Coder系列，提供高效智能解决方案。<span style="color:#FF7043;">热度：★★★★★</span></li>
+                <li><a href="https://jeniya.cn/" target="_blank"><strong>更多API服务</strong></a> - 包括百度文心一言、Gemini、Llama 3等多样化模型接口，持续更新中。</li>
+            </ul>
+        </div>
+
+        <div class="section-container section-3">
+            <h2>API中转站官方VS 简易API：全方位对比</h2>
+            <table border="1" role="table" aria-label="API服务对比">
+                <thead>
+                    <tr>
+                        <th>对比项</th>
+                        <th>官方API服务</th>
+                        <th><a href="https://jeniya.cn/" target="_blank" class="zzzzapi-highlight">简易API</a> API中转站</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>访问方式</strong></td>
+                        <td>需要科学上网</td>
+                        <td>✅ 国内直接访问，无需任何工具</td>
+                    </tr>
+                    <tr>
+                        <td><strong>接口延迟</strong></td>
+                        <td>200-500ms不等</td>
+                        <td>✅ 优化至50-100ms，响应更快</td>
+                    </tr>
+                    <tr>
+                        <td><strong>模型支持</strong></td>
+                        <td>单一平台模型</td>
+                        <td>✅ 一站式接入所有主流大模型API</td>
+                    </tr>
+                    <tr>
+                        <td><strong>成本</strong></td>
+                        <td>官方定价，美元结算</td>
+                        <td>✅ 比官方低20-40%，人民币付款</td>
+                    </tr>
+                    <tr>
+                        <td><strong>接口文档</strong></td>
+                        <td>大部分英文，理解困难</td>
+                        <td>✅ 全中文接口文档，示例代码丰富</td>
+                    </tr>
+                    <tr>
+                        <td><strong>计费方式</strong></td>
+                        <td>需预充值，额度较高</td>
+                        <td>✅ 按量计费，无最低消费要求</td>
+                    </tr>
+                    <tr>
+                        <td><strong>技术支持</strong></td>
+                        <td>邮件支持，响应慢</td>
+                        <td>✅ 7×24小时中文技术支持，微信群及时解答</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 18px;"><strong>专家建议：</strong> 对于国内开发者和企业， <a href="https://jeniya.cn/" target="_blank" class="zzzzapi-highlight">简易API</a> 是更便捷、更经济的AI API接入首选方案，助您快速实现项目落地。</p>
+        </div>
+
+        <div class="section-container section-4">
+            <h2>【图文教程】如何快速使用简易API中转服务？</h2>
+            <ol>
+                <li><strong>第一步：</strong>访问<a href="https://jeniya.cn/" target="_blank" class="zzzzapi-highlight">简易API官网</a>并完成注册</li>
+                <li><strong>第二步：</strong>登录控制台，创建并获取您的API密钥</li>
+                <li><strong>第三步：</strong>选择需要调用的API服务（OpenAI / Claude / Deepseek等）</li>
+                <li><strong>第四步：</strong>根据文档修改接口地址，实现快速集成</li>
+                <li><strong>第五步：</strong>充值账户或使用赠送免费额度开始调用API</li>
+            </ol>
+
+            <h2>API调用示例（Python）</h2>
+            <pre><code>
+import requests
+
+API_KEY = "your_简易api_key"
+API_URL = "https://api.jeniya.cn/v1/chat/completions"
+
+headers = {
+    "Authorization": f"Bearer {API_KEY}",
+    "Content-Type": "application/json"
+}
+
+data = {
+    "model": "gpt-4o",
+    "messages": [
+        {"role": "system", "content": "你是专业AI助手"},
+        {"role": "user", "content": "请介绍API中转服务的优势"}
+    ]
+}
+
+response = requests.post(API_URL, headers=headers, json=data)
+print(response.json())
+            </code></pre>
+        </div>
+
+        <div class="section-container section-5">
+            <h2>简易API中转站常见问题解答</h2>
+
+            <h3>1. API中转服务的安全性如何？会保存用户数据吗？</h3>
+            <p>简易API采用端到端加密技术，仅代理请求，不存储用户对话内容；通过ISO27001信息安全认证，严格保障隐私和数据安全。</p>
+
+            <h3>2. API请求速度如何，能否满足生产需求？</h3>
+            <p>平台在国内多地部署节点，平均响应延迟仅50-100ms，稳定高效，完全满足企业级生产环境需求。</p>
+
+            <h3>3. 如何获取API密钥？</h3>
+            <p>注册并登录<a href="https://jeniya.cn/" target="_blank" class="zzzzapi-highlight">简易API</a>后，进入控制台即可一键创建API密钥，新用户赠送100元免费额度。</p>
+
+            <h3>4. 支持哪些调用方式和开发语言？</h3>
+            <p>支持Python、Node.js、Java、PHP、Go等多语言，兼容官方OpenAI及Anthropic等API标准，迁移简便。</p>
+
+            <h3>5. 计费模式是怎样的？</h3>
+            <p>基于token使用量计费，支持灵活预充值和后付费，无最低消费限制，透明清晰。</p>
+        </div>
+
+        <div class="section-container section-6">
+            <h2>为什么Deepseek API和ChatGPT API备受关注？</h2>
+            <p>根据2025最新搜索数据，<strong>Deepseek API</strong>和<strong>ChatGPT API</strong>分别获得6.69万和8.4万月搜索量，成为开发者关注的最热AI模型接口。</p>
+            <p>热度原因总结：</p>
+            <ul>
+                <li>Deepseek以其卓越的中文理解和代码生成能力深受国内用户欢迎。</li>
+                <li>ChatGPT凭借强大的多场景适用性和不断迭代的模型性能，保持领先优势。</li>
+                <li>二者均通过<a href="https://jeniya.cn/" target="_blank" class="zzzzapi-highlight">简易API</a>服务，解决了国内访问壁垒。</li>
+            </ul>
+
+            <h2>立即开始您的AI开发之旅</h2>
+            <p>访问<a href="https://jeniya.cn/" target="_blank">https://jeniya.cn/</a> ，快速注册并获取API密钥，免费体验国内最佳AI大模型API中转服务！</p>
+            <p>欢迎收藏本页面，分享给更多开发者，一起加速AI未来！</p>
+            <p style="text-align: right; font-size: 14px; color: var(--text-medium);">最后更新时间: <strong id="update-time">2025年3月26日</strong></p>
+        </div>
+
+    </section>
+
+<script>
+    // 滚动至内容
+    function scrollToContent() {
+        document.getElementById('more-content').scrollIntoView({behavior: 'smooth'});
+    }
+
+    // 日期格式化
+    function formatDate(date) {
+        const y = date.getFullYear();
+        const m = (date.getMonth() + 1).toString().padStart(2,"0");
+        const d = date.getDate().toString().padStart(2,"0");
+        return `${y}/${m}/${d}`;
+    }
+
+    // 设置当前日期，页面已加载后执行
+    document.addEventListener('DOMContentLoaded', function(){
+        const now = new Date();
+        document.getElementById('curdate').textContent = formatDate(now);
+        document.getElementById('update-time').textContent = formatDate(now).replace(/\//g, '年').replace(/(\d+)$/, '$1日');
+    });
+</script>
+
+</body>
+</html>
